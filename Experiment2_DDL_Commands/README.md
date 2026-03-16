@@ -105,10 +105,14 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+Insert the below data into the Student_details table, allowing the Subject and MARKS columns to take their default values.
+
+RollNo      Name          Gender      
+----------  ------------  ----------  
+204         Samuel Black  M          
 
 ```sql
--- Paste your SQL code below for Question 1
+INSERT INTO student_details(RollNo,Name,Gender) VALUES (204,"Samuel Black","M");
 ```
 
 **Output:**
@@ -117,10 +121,17 @@ CREATE TABLE Table_Name (
 
 **Question 2**
 ---
--- Paste Question 2 here
+Create a table named Locations with the following columns:
+
+LocationID as INTEGER
+LocationName as TEXT
+Address as TEXT
 
 ```sql
--- Paste your SQL code below for Question 2
+CREATE TABLE Locations(
+LocationID  INTEGER,
+LocationName  TEXT,
+Address  TEXT );
 ```
 
 **Output:**
@@ -129,10 +140,19 @@ CREATE TABLE Table_Name (
 
 **Question 3**
 ---
--- Paste Question 3 here
-
+In the Books table, insert a record where some fields are NULL, another record where all fields are filled without any NULL values, and a third record where some fields are filled, and others are left as NULL.
+```
+ISBN             Title                      Author           Publisher   Year
+---------------  -------------------------  ---------------  ----------  ----------
+978-1234567890   Introduction to AI         John Doe
+978-9876543210   Deep Learning              Jane Doe         TechPress   2022
+978-1122334455   Cybersecurity Essentials   Alice Smith                  2021
+```
 ```sql
--- Paste your SQL code below for Question 3
+INSERT INTO Books(ISBN,Title,Author,Publisher,year) 
+VALUES('978-1234567890','Introduction to AI','John Doe',NULL,NULL),
+('978-9876543210','Deep Learning','Jane Doe','TechPress',2022),
+('978-1122334455','Cybersecurity Essentials','Alice Smith',NULL,2021);
 ```
 
 **Output:**
@@ -141,10 +161,18 @@ CREATE TABLE Table_Name (
 
 **Question 4**
 ---
--- Paste Question 4 here
+Create a table named Tasks with the following columns:
 
+TaskID as INTEGER
+TaskName as TEXT
+DueDate as DATE
 ```sql
--- Paste your SQL code below for Question 4
+create table Tasks
+(
+TaskID INTEGER,
+TaskName TEXT,
+DueDate DATE 
+);
 ```
 
 **Output:**
@@ -153,10 +181,17 @@ CREATE TABLE Table_Name (
 
 **Question 5**
 ---
--- Paste Question 5 here
+Create a table named Members with the following columns:
 
+MemberID as INTEGER
+MemberName as TEXT
+JoinDate as DATE
 ```sql
--- Paste your SQL code below for Question 5
+create table Members(
+MemberID INTEGER,
+MemberName TEXT,
+JoinDate DATE 
+);
 ```
 
 **Output:**
@@ -165,10 +200,11 @@ CREATE TABLE Table_Name (
 
 **Question 6**
 ---
--- Paste Question 6 here
+Write an SQL query to change the name of the column id to employee_id in the table employee.
+
 
 ```sql
--- Paste your SQL code below for Question 6
+alter table employee RENAME COLUMN id TO employee_id;
 ```
 
 **Output:**
@@ -177,10 +213,12 @@ CREATE TABLE Table_Name (
 
 **Question 7**
 ---
--- Paste Question 7 here
+Insert all products from Discontinued_products into Products.
 
+Table attributes are ProductID, ProductName, Price, Stock
 ```sql
--- Paste your SQL code below for Question 7
+insert into Products
+select * from Discontinued_products
 ```
 
 **Output:**
@@ -189,10 +227,19 @@ CREATE TABLE Table_Name (
 
 **Question 8**
 ---
--- Paste Question 8 here
+Create a table named Products with the following columns:
 
+ProductID as INTEGER
+ProductName as TEXT
+Price as REAL
+Stock as INTEGER
 ```sql
--- Paste your SQL code below for Question 8
+create table Products(
+ProductID  INTEGER,
+ProductName TEXT,
+Price REAL,
+Stock INTEGER
+);
 ```
 
 **Output:**
@@ -201,10 +248,21 @@ CREATE TABLE Table_Name (
 
 **Question 9**
 ---
--- Paste Question 9 here
-
+Create a new table named contacts with the following specifications:
+contact_id as INTEGER and primary key.
+first_name as TEXT and not NULL.
+last_name as TEXT and not NULL.
+email as TEXT.
+phone as TEXT and not NULL with a check constraint to ensure the length of phone is at least 10 characters.
 ```sql
--- Paste your SQL code below for Question 9
+create table contacts
+(
+contact_id INTEGER primary key,
+first_name TEXT not NULL,
+last_name TEXT not NULL,
+email TEXT,
+phone TEXT NOT NULL CHECK(length(phone)>=10) 
+);
 ```
 
 **Output:**
@@ -213,15 +271,14 @@ CREATE TABLE Table_Name (
 
 **Question 10**
 ---
--- Paste Question 10 here
-
+Write a SQL Query  to add attribute Date_of_joining as Date and rename the attribute job_title as Designation in the table 'Employees'
 ```sql
--- Paste your SQL code below for Question 10
+ALTER TABLE Employees ADD Date_of_joining Date;
+ALTER TABLE Employees RENAME COLUMN job_title TO Designation;
 ```
 
 **Output:**
 
-![Output10](output.png)
 
 
 ## RESULT
