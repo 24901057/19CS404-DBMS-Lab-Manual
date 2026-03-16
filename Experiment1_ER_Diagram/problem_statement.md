@@ -22,27 +22,51 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 - Payments tracked for memberships and sessions.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
 
+![Image](https://github.com/user-attachments/assets/b0392874-cdca-4724-81bf-b6512bc0b335)
 ### Entities and Attributes
-
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
+```
+1.Member
+Attributes: ID (Primary Key), Name, Membership Type
+2.Program
+Attributes: Program ID (Primary Key), Program Name
+3.Trainer
+Attributes: Name, Contact No, Experience
+4. Session
+Attributes: Date, Day, Trainer Name
+5. Payment
+Attributes: Name, Date, Amount
+6. Attendance
+Attributes: Date, Status
+```
+### Relationship Between Entities
+```
+1. Member — Makes — Payment
+ A member makes a payment.
+ One member can make multiple payments.
+ Each payment belongs to one member.
+ Cardinality is 1: M
+2. Member— Register — Program
+ A member registers for a program.
+ A member can register for multiple programs.
+ A program can have multiple members.
+ Cardinality is M: N
+3. Program — Assigns — Trainer
+ A program is assigned to a trainer.
+ A program may have multiple trainers
+ A trainer may handle multiple programs.
+ Cardinality is M: N
+4. Trainer— Conducts — Session
+ A trainer conducts sessions.
+ One trainer can conduct many sessions.
+ Each session is conducted by one trainer.
+ Cardinality is 1: M
+5. Session — Records — Attendance
+ Attendance is recorded for each session.
+ One session can have multiple attendance records.
+ Each attendance record belongs to one session.
+ Cardinality is 1: M
+```
 ### Assumptions
 - 
 - 
@@ -64,8 +88,8 @@ The Central Library wants to manage book lending and cultural events.
 - Overdue fines apply for late returns.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
+
+![Image](https://github.com/user-attachments/assets/c2131fa3-c682-48b2-b17c-fab26464540c)
 
 ### Entities and Attributes
 
@@ -106,8 +130,9 @@ A popular restaurant wants to manage reservations, orders, and billing.
 - Waiters assigned to serve reservations.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
+
+![Image](https://github.com/user-attachments/assets/e042b8a0-0182-463e-84ed-4118d5c8f040)
+
 
 ### Entities and Attributes
 
