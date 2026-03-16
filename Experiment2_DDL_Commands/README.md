@@ -117,7 +117,7 @@ INSERT INTO student_details(RollNo,Name,Gender) VALUES (204,"Samuel Black","M");
 
 **Output:**
 
-![Output1](output.png)
+<img width="1212" height="314" alt="Image" src="https://github.com/user-attachments/assets/a932abf6-6559-4077-8548-18412bb72c36" />
 
 **Question 2**
 ---
@@ -136,7 +136,7 @@ Address  TEXT );
 
 **Output:**
 
-![Output2](output.png)
+<img width="1195" height="377" alt="Image" src="https://github.com/user-attachments/assets/694cf865-6716-4261-89ea-969591ce1f59" />
 
 **Question 3**
 ---
@@ -157,7 +157,7 @@ VALUES('978-1234567890','Introduction to AI','John Doe',NULL,NULL),
 
 **Output:**
 
-![Output3](output.png)
+<img width="1199" height="292" alt="Image" src="https://github.com/user-attachments/assets/fa2ce31a-0cd4-46c6-936e-4d572001417f" />
 
 **Question 4**
 ---
@@ -177,7 +177,7 @@ DueDate DATE
 
 **Output:**
 
-![Output4](output.png)
+<img width="1130" height="339" alt="Image" src="https://github.com/user-attachments/assets/1186937a-b92d-4417-a2a7-1e4d20557f43" />
 
 **Question 5**
 ---
@@ -196,7 +196,7 @@ JoinDate DATE
 
 **Output:**
 
-![Output5](output.png)
+<img width="1192" height="334" alt="Image" src="https://github.com/user-attachments/assets/0d6834d0-356a-44b9-937a-20845faad117" />
 
 **Question 6**
 ---
@@ -209,7 +209,7 @@ alter table employee RENAME COLUMN id TO employee_id;
 
 **Output:**
 
-![Output6](output.png)
+<img width="1001" height="196" alt="Image" src="https://github.com/user-attachments/assets/889a8bcd-9a85-4a0f-bb5d-6df48559c8a6" />
 
 **Question 7**
 ---
@@ -223,7 +223,7 @@ select * from Discontinued_products
 
 **Output:**
 
-![Output7](output.png)
+<img width="1185" height="267" alt="Image" src="https://github.com/user-attachments/assets/c11b083b-2fba-4f16-b749-f86a30b0eeb1" />
 
 **Question 8**
 ---
@@ -244,7 +244,8 @@ Stock INTEGER
 
 **Output:**
 
-![Output8](output.png)
+
+<img width="1180" height="239" alt="Image" src="https://github.com/user-attachments/assets/c569a830-04c3-4d09-96d4-5e00f6f44f64" />
 
 **Question 9**
 ---
@@ -267,7 +268,7 @@ phone TEXT NOT NULL CHECK(length(phone)>=10)
 
 **Output:**
 
-![Output9](output.png)
+<img width="1137" height="226" alt="Image" src="https://github.com/user-attachments/assets/a924011c-445b-479e-84f4-6ab13e379fb5" />
 
 **Question 10**
 ---
@@ -279,7 +280,7 @@ ALTER TABLE Employees RENAME COLUMN job_title TO Designation;
 
 **Output:**
 
-
+<img width="1182" height="234" alt="Image" src="https://github.com/user-attachments/assets/611b9996-a082-45a9-94b1-1a64434b2b37" />
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
